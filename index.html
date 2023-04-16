@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=\, initial-scale=1.0" />
+  <title>Cash register</title>
+
+  <link rel="stylesheet" href="./assets/css/main.min.css">
+  <script src="./assets/js/main.js" defer></script>
+</head>
+
+<body>
+  <h1>Cash Register</h1>
+  <form action="" id="cash-register">
+
+    <div class="form-section">
+      <div class="form-group">
+        <label for="price">Price: </label><input type="text" id="price" placeholder="Enter price..." required />
+      </div>
+
+      <div class="form-group">
+        <label for="cash">Cash: </label><input type="text" id="cash" placeholder="Enter cash..." required />
+      </div>
+    </div>
+
+    <!-- cash in drawer -->
+    <fieldset>
+      <legend>Cash in drawer</legend>
+
+      <div class="form-group">
+        <label for="penny">Penny: </label>
+        <input type="text" class="cash-in-drawer" value="1.01" id="penny" />
+      </div>
+
+      <div class="form-group">
+        <label for="nickel">Nickel: </label>
+        <input type="text" class="cash-in-drawer" value="2.05" id="nickel" />
+      </div>
+
+      <div class="form-group">
+        <label for="dime">Dime: </label>
+        <input type="text" class="cash-in-drawer" value="3.1" id="dime" />
+      </div>
+
+      <div class="form-group">
+        <label for="quarter">Quarter: </label>
+        <input type="text" class="cash-in-drawer" value="4.25" id="quarter" />
+      </div>
+
+      <div class="form-group">
+        <label for="one">One dollar: </label>
+        <input type="text" class="cash-in-drawer" value="90" id="one" />
+      </div>
+
+      <div class="form-group">
+        <label for="five">Five dollars: </label>
+        <input type="text" class="cash-in-drawer" value="55" id="five" />
+      </div>
+
+
+      <div class="form-group">
+        <label for="ten">Ten dollars: </label>
+        <input type="text" class="cash-in-drawer" value="20" id="ten" />
+      </div>
+
+      <div class="form-group">
+        <label for="twenty">Twenty dollars: </label>
+        <input type="text" class="cash-in-drawer" value="60" id="twenty" />
+      </div>
+
+      <div class="form-group">
+        <label for="one-hundred">One hundred dollars: </label>
+        <input type="text" class="cash-in-drawer" value="100" id="one-hundred" />
+      </div>
+
+    </fieldset>
+
+    <button type="submit">Calculate</button>
+  </form>
+
+  <div class="result">
+
+  </div>
+</body>
+
+</html>
