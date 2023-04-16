@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.6rem;
+  padding-top: 4rem;
+}
+
+button {
+  border: none;
+  display: block;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  background-color: rgb(57, 74, 228);
+  padding: 1rem 1.2rem;
+  color: #fff;
+  border-radius: 4px;
+  margin-bottom: 6rem;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  will-change: opacity, color;
+
+  &:hover {
+    opacity: 0.8;
+    color: #000;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+#cash-register {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+
+  .form-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+
+    label {
+      width: 7rem;
+    }
+
+    input {
+      flex: 1;
+      padding: 1rem;
+      font-size: 1.6rem;
+      outline: none;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+  }
+
+  fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.6rem;
+    gap: 4rem;
+    margin-top: 3rem;
+    border-radius: 4px;
+
+    .form-group {
+      width: calc(50% - 4rem);
+
+      input {
+        width: 4rem;
+      }
+
+      label {
+        flex: 1;
+      }
+    }
+  }
+}

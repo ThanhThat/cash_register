@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.6rem;
+  padding-top: 4rem;
+}
+
+button {
+  border: none;
+  display: block;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  background-color: rgb(57, 74, 228);
+  padding: 1rem 1.2rem;
+  color: #fff;
+  border-radius: 4px;
+  margin-bottom: 6rem;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  will-change: opacity, color;
+}
+button:hover {
+  opacity: 0.8;
+  color: #000;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+#cash-register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+}
+#cash-register .form-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#cash-register .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+}
+#cash-register .form-group label {
+  width: 7rem;
+}
+#cash-register .form-group input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem;
+  font-size: 1.6rem;
+  outline: none;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+#cash-register fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1.6rem;
+  gap: 4rem;
+  margin-top: 3rem;
+  border-radius: 4px;
+}
+#cash-register fieldset .form-group {
+  width: calc(50% - 4rem);
+}
+#cash-register fieldset .form-group input {
+  width: 4rem;
+}
+#cash-register fieldset .form-group label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
