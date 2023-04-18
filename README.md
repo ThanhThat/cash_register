@@ -9,4 +9,4 @@
    b. cash là số tiền thực tế mà khách hàng trả
    c. cid: là số tiền, số tờ tiền có trong ngăn kéo.
 
-3. Quy trình hoạt động của chương trình:
+3. Link practice: [Cash register](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects/cash-register)
