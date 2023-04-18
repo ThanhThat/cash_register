@@ -39,7 +39,7 @@ button {
   padding: 1rem 1.2rem;
   color: #fff;
   border-radius: 4px;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   cursor: pointer;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
@@ -62,7 +62,7 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 60%;
+  max-width: 60%;
 }
 #cash-register .form-section {
   display: -webkit-box;
@@ -84,7 +84,7 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 3rem;
+  margin-top: 1.2rem;
 }
 #cash-register .form-group label {
   width: 7rem;
@@ -106,18 +106,85 @@ h1 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 1.6rem;
-  gap: 4rem;
-  margin-top: 3rem;
+  gap: 1.6rem;
+  margin-top: 2rem;
   border-radius: 4px;
 }
 #cash-register fieldset .form-group {
-  width: calc(50% - 4rem);
+  width: calc(30% - 1.6rem);
 }
 #cash-register fieldset .form-group input {
-  width: 4rem;
+  max-width: 7rem;
 }
 #cash-register fieldset .form-group label {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  margin-left: 2rem;
+}
+
+.result {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.result-title {
+  font-size: 3rem;
+  color: #3253c2;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  vertical-align: center;
+}
+.result-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 2rem;
+  margin-top: 1.8rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.result-body-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1.6rem;
+}
+.result-body-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.result-body span {
+  background-color: #000;
+  color: #fff;
+  padding: 1.2rem;
+  min-width: 10rem;
 }

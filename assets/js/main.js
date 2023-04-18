@@ -51,13 +51,22 @@
     // const change = result.change;
     let changeStr = "";
     result.change.forEach((item, i) => {
-      changeStr += `<div>${item[0]}: ${item[1]}$</div>`;
+      changeStr += `<span>${item[0]}: ${item[1]}$</span>`;
     });
 
     console.log(changeStr);
 
-    resultElem.innerHTML = `<h2>RESULT</h2><h3 style="Color: red; margin-top: 2rem">Status:</h3></div> ${status}</div>
-       <h3 style="Color: red; margin-top: 2rem"> Change:</h3><div> ${changeStr};</div>
+    resultElem.innerHTML = `<h2 class="result-title">RESULT</h2>
+                            <div class="result-body">
+                              <div class="result-body-item">
+                                <h3 class="result-body-title">Status: </h3>
+                                <div class="result-body-content">${status}</div>
+                              </div>
+                              <div class="result-body-item">
+                                <h3 class="result-body-title">Change: </h3>
+                                <div class="result-body-content"> ${changeStr};</div>
+                              </div>
+                            </div>
       `;
   });
 })();

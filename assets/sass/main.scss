@@ -29,7 +29,7 @@ button {
   padding: 1rem 1.2rem;
   color: #fff;
   border-radius: 4px;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
   will-change: opacity, color;
@@ -47,7 +47,7 @@ h1 {
 #cash-register {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  max-width: 60%;
 
   .form-section {
     display: flex;
@@ -59,7 +59,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 1.2rem;
 
     label {
       width: 7rem;
@@ -79,20 +79,67 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     padding: 1.6rem;
-    gap: 4rem;
-    margin-top: 3rem;
+    gap: 1.6rem;
+    margin-top: 2rem;
     border-radius: 4px;
 
     .form-group {
-      width: calc(50% - 4rem);
+      width: calc(30% - 1.6rem);
 
       input {
-        width: 4rem;
+        max-width: 7rem;
       }
 
       label {
         flex: 1;
+        margin-left: 2rem;
       }
+    }
+  }
+}
+
+.result {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-title {
+    font-size: 3rem;
+    color: #3253c2;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    vertical-align: center;
+  }
+
+  &-body {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-top: 1.8rem;
+    flex-direction: column;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1.6rem;
+    }
+
+    &-content {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    span {
+      background-color: #000;
+      color: #fff;
+      padding: 1.2rem;
+      min-width: 10rem;
     }
   }
 }
