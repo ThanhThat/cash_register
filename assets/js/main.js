@@ -31,10 +31,10 @@
         return;
       }
 
-      cidInitial[i][1] = currencyValue;
+      cidInitial[i][1] = Math.round(currencyValue * 100) / 100;
     });
 
-    console.log(cidInitial);
+    // console.log(cidInitial);
 
     let price = Number(priceElem.value);
     let cash = Number(cashElem.value);
@@ -45,7 +45,7 @@
     }
 
     const result = checkCashRegister(price, cash, cidInitial);
-    console.log(result);
+    // console.log(result);
 
     const status = result.status;
     // const change = result.change;
@@ -53,8 +53,6 @@
     result.change.forEach((item, i) => {
       changeStr += `<span>${item[0]}: ${item[1]}$</span>`;
     });
-
-    console.log(changeStr);
 
     resultElem.innerHTML = `<h2 class="result-title">RESULT</h2>
                             <div class="result-body">
@@ -72,6 +70,8 @@
 })();
 
 const checkCashRegister = (price, cash, cid) => {
+  const cashInDrawerList = document.querySelectorAll(".cash-in-drawer");
+
   // create an object to store the result
   const result = { status: "", change: [] };
 
@@ -94,7 +94,18 @@ const checkCashRegister = (price, cash, cid) => {
   // If the chang due is equal to the total cash in drawer, return CLOSED
   if (changDue === totalCID) {
     result.status = "CLOSED";
-    result.change = cid;
+    result.change = cidCopy;
+
+    // cap nhat lai mang cid
+    cidCopy.forEach((item) => {
+      if (item > 0) {
+        item = 0;
+      }
+    });
+
+    console.log;
+    // cập nhật lại cid trong form
+    cashInDrawerList.forEach((item) => (item.value = 0));
     return result;
   }
 
@@ -118,16 +129,21 @@ const checkCashRegister = (price, cash, cid) => {
 
   for (let i = 0; i < cidCopy.length; i++) {
     let currency = cidCopy[i][0];
-    let currencyTotal = cidCopy[i][1];
-    let currencyValue = currencyValues[currency];
+    let currencyTotal = Math.round(cidCopy[i][1] * 100) / 100;
+    let currencyValue = Math.round(currencyValues[currency] * 100) / 100;
     let currencyAmount = 0;
 
     while (changDue >= currencyValue && currencyTotal > 0) {
       currencyTotal -= currencyValue;
+      currencyTotal = Math.round(currencyTotal * 100) / 100;
+      console.log(currencyTotal);
       changDue -= currencyValue;
       changDue = Math.round(changDue * 100) / 100; // Round to 2 decimal places
       currencyAmount += currencyValue;
+      currencyAmount = Math.round(currencyAmount * 100) / 100;
     }
+
+    cidCopy[i][1] = Math.round(currencyTotal * 100) / 100; // cập nhật lại mảng cash in drawer
 
     if (currencyAmount > 0) {
       change.push([currency, currencyAmount]);
@@ -140,6 +156,9 @@ const checkCashRegister = (price, cash, cid) => {
   } else {
     result.status = "OPEN";
     result.change = change;
+    cidCopy.reverse();
+    // cập nhật lại giá trị cid trong form
+    cashInDrawerList.forEach((item, i) => (item.value = cidCopy[i][1]));
     return result;
   }
 };
